@@ -1,0 +1,16 @@
+<div class="page">
+  <div class="card">
+    <h1>AI SQL Generator</h1>
+
+    <textarea [(ngModel)]="userInput"
+              placeholder="Describe your query... e.g. Get employees with department names">
+    </textarea>
+
+    <button (click)="generateSql()">Generate SQL</button>
+
+    <div class="output" *ngIf="generatedSql">
+      <h3>Generated SQL</h3>
+      <pre>{{ generatedSql }}</pre>
+    </div>
+  </div>
+</div>
